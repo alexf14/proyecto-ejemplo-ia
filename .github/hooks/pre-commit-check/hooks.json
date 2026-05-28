@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionEnd": [
+      {
+        "type": "command",
+        "bash": ".github/hooks/pre-commit-check/check-conventions.sh",
+        "cwd": ".",
+        "env": {
+          "CHECK_MODE": "warn",
+          "PROJECT_TYPE": "spring-boot"
+        },
+        "timeoutSec": 30
+      }
+    ]
+  }
+}

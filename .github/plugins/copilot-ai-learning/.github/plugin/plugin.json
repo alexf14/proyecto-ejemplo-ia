@@ -1,0 +1,30 @@
+{
+  "name": "copilot-ai-learning",
+  "description": "Plugin didáctico que agrupa agents, skills y comandos para aprender a desarrollar con GitHub Copilot en proyectos Java Spring Boot.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Copilot AI Learning Community"
+  },
+  "repository": "https://github.com/tu-usuario/copilot-ai-learning",
+  "license": "MIT",
+  "keywords": [
+    "java",
+    "spring-boot",
+    "learning",
+    "agents",
+    "skills",
+    "mcp",
+    "copilot",
+    "didactic"
+  ],
+  "agents": [
+    "./agents/java-architect.agent.md",
+    "./agents/test-writer.agent.md",
+    "./agents/code-reviewer.agent.md",
+    "./agents/mcp-expert.agent.md"
+  ],
+  "skills": [
+    "./skills/generate-crud",
+    "./skills/setup-mcp-server"
+  ]
+}
