@@ -1,0 +1,26 @@
+{
+  "servers": {
+    "task-manager-local": {
+      "command": "java",
+      "args": ["-jar", "target/copilot-ai-learning-1.0.0.jar", "--spring.profiles.active=mcp"],
+      "env": {
+        "SPRING_DATASOURCE_URL": "jdbc:h2:mem:tasksdb"
+      }
+    },
+    "github": {
+      "command": "docker",
+      "args": [
+        "run", "--rm", "-i",
+        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "deepwiki": {
+      "url": "https://mcp.deepwiki.com/sse",
+      "transport": "sse"
+    }
+  }
+}
